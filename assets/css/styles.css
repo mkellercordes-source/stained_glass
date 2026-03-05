@@ -69,9 +69,9 @@ img{ max-width:100%; display:block; }
   position: sticky;
   top:0;
   z-index:50;
-  background: rgba(251,248,243,.86);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border);
+  background: transparent;
+  backdrop-filter: none;
+  border-bottom: none;
 }
 .header-inner{
   display:flex;
@@ -100,7 +100,7 @@ img{ max-width:100%; display:block; }
 }
 
 .brand-stack{ display:grid; gap:2px; }
-.brand-name{ font-family: var(--serif); font-size: 1.15rem; font-weight: 800; line-height: 1.1; }
+.brand-name{ font-family: var(--serif); font-size: 1.15rem; font-weight: 900; line-height: 1.1; }
 .brand-accent{ color: var(--gold); }
 .brand-meta{
   font-size: .92rem;
@@ -143,20 +143,24 @@ img{ max-width:100%; display:block; }
   padding: 10px 12px;
   border-radius: 12px;
   text-decoration:none;
-  color: var(--muted);
-  border: 1px solid transparent;
-  font-weight: 700;
+  color: var(--ink);
+  border: 1px solid rgba(0,0,0,.06);
+  font-weight: 850;
+  background: rgba(251,248,243,.42); /* transparent "pill" for readability */
+  box-shadow: 0 10px 24px rgba(0,0,0,.06);
+  text-shadow: 0 1px 10px rgba(0,0,0,.10);
 }
 .nav-link:hover{
   color: var(--ink);
-  border-color: rgba(0,0,0,.08);
-  background: rgba(255,255,255,.55);
+  border-color: rgba(0,0,0,.10);
+  background: rgba(251,248,243,.62);
+  box-shadow: 0 14px 30px rgba(0,0,0,.08);
 }
 .nav-link.is-active,
 .nav-link[aria-current="page"]{
   color: var(--ink);
-  border-color: rgba(181,142,44,.35);
-  background: rgba(181,142,44,.10);
+  border-color: rgba(181,142,44,.28);
+  background: rgba(181,142,44,.14);
 }
 
 /* Banner */
@@ -380,7 +384,7 @@ img{ max-width:100%; display:block; }
     padding: 10px;
     border-radius: 16px;
     border: 1px solid var(--border);
-    background: rgba(251,248,243,.97);
+    background: rgba(255,255,255,0.0);
     box-shadow: var(--shadow);
     display:none;
     flex-direction: column;
